@@ -1,3 +1,7 @@
+# Developer Notes
+This project utilized Bootstrap (via npm) as a CSS Framework and Laravel as a PHP Framework.
+Please do not use my personal information for any bad purposes.
+
 # Profile
 ![Image1](https://github.com/SeeToMayYoung/profilejasong/blob/main/profile_page.png)
 
