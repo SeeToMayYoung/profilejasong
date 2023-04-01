@@ -38,7 +38,7 @@
             <div class="profile-content">
                 <div class="name-desc">
                     <p class="profile-name">
-                        JASON MADE SITUMEANG
+                        JASON MADE SITUMEANG ganteng
                     </p>
                     <p class="profile-desc">
                         I'm an Indonesia - Bali origined college student who mainly does Programming and Graphic Designing. I also love to play Valorant, osu!, and Pou in my spare time.
