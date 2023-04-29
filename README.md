@@ -7,7 +7,7 @@ Here is a GIF to show you how the website should look and work like when you nav
 ![gif1](https://github.com/SeeToMayYoung/profilejasong/blob/main/screenshots/My%20Profile.gif)
 
 # Website Preview (PNGs)
-Included PNGs too because the GIF one is too compressed and it kinda made the website looked bad :/ Here's are some still images for you to see the full detail and real colors.
+Included PNGs too because the GIF one is too compressed and it kinda made the website looked bad :/ Here's are some still images for you to see the full detail and real colors. <br />
 === PROFILE === <br />
 ![png1](https://github.com/SeeToMayYoung/profilejasong/blob/main/screenshots/Profile.png)
 <br />
