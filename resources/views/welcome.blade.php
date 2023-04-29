@@ -21,9 +21,9 @@
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-skills-tab" data-bs-toggle="pill" data-bs-target="#pills-skills" type="button" role="tab" aria-controls="pills-skills" aria-selected="false" style="color: #EEEEEE">SKILL</button>
             </li>
-            <!-- <li class="nav-item" role="presentation">
-                <button class="nav-link" id="pills-experience-tab" data-bs-toggle="pill" data-bs-target="#pills-experience" type="button" role="tab" aria-controls="pills-experience" aria-selected="false" style="color: #EEEEEE">EXPERIENCE</button>
-            </li> -->
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="pills-experience-tab" data-bs-toggle="pill" data-bs-target="#pills-experience" type="button" role="tab" aria-controls="pills-experience" aria-selected="false" style="color: #EEEEEE">S & W</button>
+            </li>
             <li class="nav-item" role="presentation">
                 <button class="nav-link" id="pills-education-tab" data-bs-toggle="pill" data-bs-target="#pills-education" type="button" role="tab" aria-controls="pills-education" aria-selected="false" style="color: #EEEEEE">EDUCATION</button>
             </li>
@@ -94,7 +94,7 @@
                                 PROGRAMMING
                             </p>
                             <p class="thin-title">
-                                I have a personal experience of over 1 year in Front-End and Back-End Programming. Most of the projects i've finished are group projects, but I occasionally do solo projects as well. 
+                                I have a personal experience of over 1 year in Front-End and Back-End Programming. Most of the projects i've finished are group projects, but I occasionally do solo projects as well.
                             </p>
                             <div class="split-line"></div>
                             <p class="thin-title" style="padding-top:1.5vh; font-weight: 700; font-size:0.7vw">
@@ -177,10 +177,188 @@
                         </div>
                     </div>
                 </div>
-                
+
             </div>
         </div>
-        <!-- <div class="tab-pane fade" id="pills-experience" role="tabpanel" aria-labelledby="pills-experience-tab" tabindex="0">Experience Page</div> -->
+        <div class="tab-pane fade" id="pills-experience" role="tabpanel" aria-labelledby="pills-experience-tab" tabindex="0">
+            <div class="content-container" style="padding-top:6vw; height:auto">
+                <div class="d-flex flex-column align-items-center" style="width: 100%">
+                    <p class="slide-title" style="color:#EEEEEE">STRENGTH</p>
+                    <p class="thin-title" style="text-align:center; padding: 0vw 4vw">
+                        These stuffs are like power-ups to me.
+                    </p>
+                    <div class="d-flex flex-wrap w-auto align-items-center justify-content-center" style="height: auto; gap: 5vh; padding-top:2vh">
+                        @foreach ($strength as $item)
+                            @if (($item['rarity'] == 'Common'))
+                                <div class="card card-flip w-auto" style="height: auto">
+                                    <div class="card-front text-white rounded" style="background-color: #1a1a1a">
+                                        <div class="card-body d-flex flex-column justify-content-between align-items-center" style="height: 20vh">
+                                            <div class="d-flex flex-column align-items-center" style="padding-top: 1vh; gap:2vh">
+                                                <img style="height: 5vh; width: auto" src="{{$item['svg']}}" alt="">
+                                                <h3 class="card-title">{{$item['name']}}</h3>
+                                            </div>
+                                            <p class="card-text text-secondary">Click and Hold this card to view details</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back rounded" style="height: 20vh; background-color: #cecece">
+                                        <div class="card-body">
+                                            <h3 class="card-title">{{$item['effect']}}</h3>
+                                            <p class="card-text">Rarity: {{$item['rarity']}}</p>
+                                            <p class="card-text">{{$item['desc']}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @elseif (($item['rarity'] == 'Rare'))
+                                <div class="card card-flip w-auto" style="height: auto">
+                                    <div class="card-front text-white rounded" style="background-color: #002502">
+                                        <div class="card-body d-flex flex-column justify-content-between align-items-center" style="height: 20vh">
+                                            <div class="d-flex flex-column align-items-center" style="padding-top: 1vh; gap:2vh">
+                                                <img style="height: 5vh; width: auto" src="{{$item['svg']}}" alt="">
+                                                <h3 class="card-title">{{$item['name']}}</h3>
+                                            </div>
+                                            <p class="card-text text-secondary">Click and Hold this card to view details</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back rounded" style="height: 20vh; background-color: #9acfaa">
+                                        <div class="card-body">
+                                            <h3 class="card-title">{{$item['effect']}}</h3>
+                                            <p class="card-text">Rarity: {{$item['rarity']}}</p>
+                                            <p class="card-text">{{$item['desc']}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @elseif (($item['rarity'] == 'Legendary'))
+                                <div class="card card-flip w-auto" style="height: auto">
+                                    <div class="card-front text-white rounded" style="background-color: #251f00">
+                                        <div class="card-body d-flex flex-column justify-content-between align-items-center" style="height: 20vh">
+                                            <div class="d-flex flex-column align-items-center" style="padding-top: 1vh; gap:2vh">
+                                                <img style="height: 5vh; width: auto" src="{{$item['svg']}}" alt="">
+                                                <h3 class="card-title">{{$item['name']}}</h3>
+                                            </div>
+                                            <p class="card-text text-secondary">Click and Hold this card to view details</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back rounded" style="height: 20vh; background-color: #cecf9a">
+                                        <div class="card-body">
+                                            <h3 class="card-title">{{$item['effect']}}</h3>
+                                            <p class="card-text">Rarity: {{$item['rarity']}}</p>
+                                            <p class="card-text">{{$item['desc']}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @elseif (($item['rarity'] == 'Godlike'))
+                                <div class="card card-flip w-auto" style="height: auto">
+                                    <div class="card-front text-white rounded" style="background-color: #250000">
+                                        <div class="card-body d-flex flex-column justify-content-between align-items-center" style="height: 20vh">
+                                            <div class="d-flex flex-column align-items-center" style="padding-top: 1vh; gap:2vh">
+                                                <img style="height: 5vh; width: auto" src="{{$item['svg']}}" alt="">
+                                                <h3 class="card-title">{{$item['name']}}</h3>
+                                            </div>
+                                            <p class="card-text text-secondary">Click and Hold this card to view details</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back rounded" style="height: 20vh; background-color: #e4b8b8">
+                                        <div class="card-body">
+                                            <h3 class="card-title">{{$item['effect']}}</h3>
+                                            <p class="card-text">Rarity: {{$item['rarity']}}</p>
+                                            <p class="card-text">{{$item['desc']}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
+                <div class="split-line" style="margin-top:8vh; margin-bottom:6vh; padding: 0"></div>
+                <div class="d-flex flex-column align-items-center" style="width: 100%; padding-bottom:4vw">
+                    <p class="slide-title" style="color:#EEEEEE">WEAKNESS</p>
+                    <p class="thin-title" style="text-align:center; padding: 0vw 4vw">
+                        Oh no.
+                    </p>
+                    <div class="d-flex flex-wrap w-auto align-items-center justify-content-center" style="height: auto; gap: 5vh; padding-top:2vh">
+                        @foreach ($weakness as $item)
+                            @if (($item['rarity'] == 'Common'))
+                                <div class="card card-flip w-auto" style="height: auto">
+                                    <div class="card-front text-white rounded" style="background-color: #1a1a1a">
+                                        <div class="card-body d-flex flex-column justify-content-between align-items-center" style="height: 20vh">
+                                            <div class="d-flex flex-column align-items-center" style="padding-top: 1vh; gap:2vh">
+                                                <img style="height: 5vh; width: auto" src="{{$item['svg']}}" alt="">
+                                                <h3 class="card-title">{{$item['name']}}</h3>
+                                            </div>
+                                            <p class="card-text text-secondary">Click and Hold this card to view details</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back rounded" style="height: 20vh; background-color: #cecece">
+                                        <div class="card-body">
+                                            <h3 class="card-title">{{$item['effect']}}</h3>
+                                            <p class="card-text">Rarity: {{$item['rarity']}}</p>
+                                            <p class="card-text">{{$item['desc']}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @elseif (($item['rarity'] == 'Rare'))
+                                <div class="card card-flip w-auto" style="height: auto">
+                                    <div class="card-front text-white rounded" style="background-color: #002502">
+                                        <div class="card-body d-flex flex-column justify-content-between align-items-center" style="height: 20vh">
+                                            <div class="d-flex flex-column align-items-center" style="padding-top: 1vh; gap:2vh">
+                                                <img style="height: 5vh; width: auto" src="{{$item['svg']}}" alt="">
+                                                <h3 class="card-title">{{$item['name']}}</h3>
+                                            </div>
+                                            <p class="card-text text-secondary">Click and Hold this card to view details</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back rounded" style="height: 20vh; background-color: #9acfaa">
+                                        <div class="card-body">
+                                            <h3 class="card-title">{{$item['effect']}}</h3>
+                                            <p class="card-text">Rarity: {{$item['rarity']}}</p>
+                                            <p class="card-text">{{$item['desc']}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @elseif (($item['rarity'] == 'Legendary'))
+                                <div class="card card-flip w-auto" style="height: auto">
+                                    <div class="card-front text-white rounded" style="background-color: #251f00">
+                                        <div class="card-body d-flex flex-column justify-content-between align-items-center" style="height: 20vh">
+                                            <div class="d-flex flex-column align-items-center" style="padding-top: 1vh; gap:2vh">
+                                                <img style="height: 5vh; width: auto" src="{{$item['svg']}}" alt="">
+                                                <h3 class="card-title">{{$item['name']}}</h3>
+                                            </div>
+                                            <p class="card-text text-secondary">Click and Hold this card to view details</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back rounded" style="height: 20vh; background-color: #cecf9a">
+                                        <div class="card-body">
+                                            <h3 class="card-title">{{$item['effect']}}</h3>
+                                            <p class="card-text">Rarity: {{$item['rarity']}}</p>
+                                            <p class="card-text">{{$item['desc']}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @elseif (($item['rarity'] == 'Godlike'))
+                                <div class="card card-flip w-auto" style="height: auto">
+                                    <div class="card-front text-white rounded" style="background-color: #250000">
+                                        <div class="card-body d-flex flex-column justify-content-between align-items-center" style="height: 20vh">
+                                            <div class="d-flex flex-column align-items-center" style="padding-top: 1vh; gap:2vh">
+                                                <img style="height: 5vh; width: auto" src="{{$item['svg']}}" alt="">
+                                                <h3 class="card-title">{{$item['name']}}</h3>
+                                            </div>
+                                            <p class="card-text text-secondary">Click and Hold this card to view details</p>
+                                        </div>
+                                    </div>
+                                    <div class="card-back rounded" style="height: 20vh; background-color: #e4b8b8">
+                                        <div class="card-body">
+                                            <h3 class="card-title">{{$item['effect']}}</h3>
+                                            <p class="card-text">Rarity: {{$item['rarity']}}</p>
+                                            <p class="card-text">{{$item['desc']}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            @endif
+                        @endforeach
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="tab-pane fade" id="pills-education" role="tabpanel" aria-labelledby="pills-education-tab" tabindex="0">
             <div class="content-container" style="padding-top:6vw; padding-bottom:3vw; height:100%">
                 <div class="info-text">
@@ -196,7 +374,6 @@
                     <div class="col-md-12">
                         <div class="card" style="border:none">
                             <div class="card-body" style="background-color:#000000">
-                                <!-- <h6 class="card-title">Timeline</h6> -->
                                 <div id="content">
                                     <ul class="timeline" style="color:#EEEEEE; font-family:'Raleway'">
                                         <li class="event" data-date="2007 - 2009">
