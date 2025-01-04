@@ -20,7 +20,7 @@ class PerksController extends Controller
         $weakness = [
             ['name' => 'We Hawt','effect' => '-25% Work Stamina','desc' => 'Working in a hot room or environment drains my energy faster', 'rarity' => 'Common', 'svg' => 'images/sun.svg'],
             ['name' => 'What? Again?','effect' => '-50% Work Focus','desc' => "When change of plans happens to often, I don't even wanna work anymore.", 'rarity' => 'Rare', 'svg' => 'images/change.svg'],
-            ['name' => 'Hi Shawty','effect' => '-100% Work Speed','desc' => "Pretty and Hot girls distracts me. It happens too often and I don't know why.", 'rarity' => 'Legendary', 'svg' => 'images/woman.svg'],
+            ['name' => 'Didididi','effect' => '-100% Work Speed','desc' => "My GF Diana distracts me. It happens too often and I don't know why.", 'rarity' => 'Legendary', 'svg' => 'images/woman.svg'],
             ['name' => 'Forbidden Creature','effect' => '-∞% Work Focus','desc' => "If I see a roach, either someone's gonna kill it, or I'm not gonna continue working.", 'rarity' => 'Godlike', 'svg' => 'images/roach.svg']
         ];
         return view('welcome')->with(['strength' => $strength, 'weakness' => $weakness]);
